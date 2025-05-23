@@ -1,16 +1,12 @@
 # 🖼️ Mediffuse: Diffusion-Driven Translation for MRI Generation from CT Scan
 
-[![Python 3.10](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  
-[![Live Demo on Gradio](https://img.shields.io/badge/Gradio-Demo-brightgreen)](GRADIO_DEMO_LINK)  
-[![Finetuned Weights](https://img.shields.io/badge/Weights-Finetuned-blue)](FINETUNED_WEIGHTS_LINK)  
-[![Training Data](https://img.shields.io/badge/Data-Training-lightgrey)](TRAIN_DATA_LINK)  
-[![Dataset on Hugging Face](https://img.shields.io/badge/Dataset-HuggingFace-orange)](HUGGINGFACE_DATASET_LINK)
+[![Python 3.10](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/) [![Live Demo on Gradio](https://img.shields.io/badge/Gradio-Demo-brightgreen)](GRADIO_DEMO_LINK) [![Finetuned Weights](https://img.shields.io/badge/Weights-Finetuned-blue)](FINETUNED_WEIGHTS_LINK) [![Training Data](https://img.shields.io/badge/Data-Training-lightgrey)](TRAIN_DATA_LINK) [![Dataset on Hugging Face](https://img.shields.io/badge/Dataset-HuggingFace-orange)](HUGGINGFACE_DATASET_LINK)
 
 ---
 
 ## 🚀 Workflow
 
-![Workflow GIF](path/to/workflow.gif)
+![Mediffuse Workflow](presentation/mediffuse.gif)
 
 A quick overview of the end-to-end pipeline:
 
