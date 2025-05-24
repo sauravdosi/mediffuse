@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7f4c87-48aa-44ef-a79d-90a75fc92bbb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/img/combined_train_loss_all.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/controlnet_psnr_ssim_heatmap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/instructpix2pix_psnr_ssim_heatmap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/0042_CT_contours.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/0042_CT_contours.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/0042_CT_contours_canny_inv.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/0042_CT_contours_canny_inv.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/0042_CT_contours_sample_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/0042_CT_contours_sample_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/0042_CT_contours_sample_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/0042_CT_contours_sample_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/ip2p_itw.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/ip2p_itw.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/ip2p_itw_mr2ct.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/ip2p_itw_mr2ct.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/ip2p_mr2ct.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/ip2p_mr2ct.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/results/results.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +72,7 @@
       <updated>1747714003449</updated>
       <workItem from="1747714005108" duration="4531000" />
       <workItem from="1747799782080" duration="2076000" />
-      <workItem from="1748023539240" duration="3401000" />
+      <workItem from="1748023539240" duration="4909000" />
     </task>
     <servers />
   </component>

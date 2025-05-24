@@ -19,10 +19,19 @@ A quick overview of the end-to-end pipeline:
 
 ## 🚀 Features
 
-- 🔄 **Bidirectional Conversion:** CT→MRI & MRI→CT on demand  
-- 🤖 **ControlNet Extension:** Conditioning on segmentation masks or edge maps  
-- ⚡ **Fast Inference:** Optimized for GPU acceleration  
-- 🎨 **Interactive Demo:** Tweak prompts, adjust strength, visualize in real time  
+- 🔄 Bidirectional Translation: Seamlessly convert CT → MRI and MRI → CT with a single command.
+
+- 🤖 Multi-Model Support: Zero-shot Stable Diffusion 1.5, ControlNet-guided diffusion, and InstructPix2Pix fine-tuned pipelines.
+
+- 🧠 Adaptive Conditioning: Leverage segmentation masks, edge maps, or textual prompts to guide generation.
+
+- ⚡ High Throughput: Fast GPU-accelerated inference achieving <1s per image on modern hardware.
+
+- 📊 Quantitative & Qualitative Evaluation: Built-in PSNR/SSIM computation and side-by-side visual results.
+
+- 🔧 Configurable Workflows: Easily customize hyperparameters, conditioning inputs, and output resolutions.
+
+- 🎨 Interactive Demo: Intuitive Gradio interface to tweak prompts, strength, and masks in real time.
 
 ---
 
@@ -52,10 +61,19 @@ A quick overview of the end-to-end pipeline:
 ![results.png](img/results/results.png)
 
 
-### Evaluation:
+## Evaluation:
 
+### ControlNet:
 
+![controlnet_psnr_ssim_heatmap.png](img/controlnet_psnr_ssim_heatmap.png)
 
+### InstructPix2Pix:
+
+![instructpix2pix_psnr_ssim_heatmap.png](img/instructpix2pix_psnr_ssim_heatmap.png)
+
+### Combined Loss:
+
+![combined_train_loss_all.png](img/combined_train_loss_all.png)
 
 ## 📦 Installation
 
@@ -65,3 +83,95 @@ Ensure you have Python 3.10 and Conda installed.
 conda create -n mediffuse python=3.10 -y  
 conda activate mediffuse  
 pip install -r requirements.txt
+```
+
+Download/Use datasets and weights:
+
+### Datasets:
+
+1. CT2MRI-img2img: https://huggingface.co/datasets/sauravdosi/ct2mri-img2img-train
+2. CT2MRI-contour2img: https://utdallas.box.com/s/4e70var2i1n53wfb5lk3g9wtyb91t3r6
+3. MRI2CT-img2img: https://huggingface.co/datasets/sauravdosi/mri2ct-img2img-train
+4. Out of Distribution: https://utdallas.box.com/s/mb8dm3kypa2mf008nkqacbhmlosq3m19
+
+### Fine-tuned Weights: Box
+
+1. InstructPix2Pix (CT2MRI): https://utdallas.box.com/s/c9yh9hv2i3dty95ajnru5419c7cx2hgm
+2. InstructPix2Pix (MRI2CT): https://utdallas.box.com/s/w8p3tn8npmic9c4oypvfsfgy40qs9dw3
+3. ControlNet (CT2MRI): https://utdallas.box.com/s/q9xbnzmhn6ow0gfr8q207coi38urjd0d
+
+Place the downloaded directories in the project root as data/ and models/.
+
+## 🛠️ Usage
+
+### 1. Environment Setup
+
+Activate the Conda environment:
+
+```conda activate mediffuse```
+
+### 2. Inference
+
+Two modes are supported: InstructPix2Pix and ControlNet.
+
+Please modify the literals inside the files.
+
+#### InstructPix2Pix
+
+```
+cd diffusers/examples/instructpix2pix/
+python gradio_demo.py 
+```
+OR for standalone inference:
+```
+python inference.py 
+```
+OR for inference on a directory along with metrics:
+```
+python infer_df.py
+```
+
+#### ControlNet
+```
+cd diffusers/examples/controlnet/
+python inference.py
+```
+
+### 3. Fine-tuning
+
+Fine-tuning scripts for both pipelines:
+
+#### InstructPix2Pix Training
+
+cd diffusers/examples/instructpix2pix/
+python train_instructpix2pix.py \
+  --train_data_dir ../../data/train \
+  --pretrained_model_path <base_model> \
+  --output_dir ../../weights/instructpix2pix_finetuned \
+  --epochs 20 --batch_size 8
+
+#### ControlNet Training
+
+cd diffusers/examples/controlnet/
+python train_controlnet.py \
+  --train_ct_dir ../../data/train/ct \
+  --train_mask_dir ../../data/train/masks \
+  --pretrained_model_path <controlnet_base> \
+  --output_dir ../../weights/controlnet_finetuned \
+  --epochs 15 --batch_size 4
+
+## 🎯 Conclusion
+
+Mediffuse provides a reliable, fast, and extensible framework for translating between CT and MRI modalities using diffusion-based generative models. Contributions:
+
+- Novel bidirectional diffusion pipeline
+
+- ControlNet integration for enhanced control
+
+- End-to-end open-source code and live demo
+
+We welcome contributions and feedback!
+
+## 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
