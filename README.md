@@ -1,4 +1,4 @@
-# 🖼️ Mediffuse: Diffusion-Driven Translation for MRI Generation from CT Scan
+# 🖼️ Mediffuse: CT ↔️ MRI Diffusion-Driven Cross-Modal Translation
 
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/) [![Live Demo on Gradio](https://img.shields.io/badge/Gradio-Demo-brightgreen)](https://d969b2857f0f723529.gradio.live/) [![Finetuned Weights and Training Data](https://img.shields.io/badge/Data&Weights-HuggingFace-orange)](https://huggingface.co/sauravdosi) 
 
@@ -28,11 +28,20 @@ A quick overview of the end-to-end pipeline:
 
 ## 🖼️ Results
 
-### Qualitative:
+### Comparative:
+![comparison.png](img/results/comparison.png)
 
-| Input CT                         | Output MRI (Zero-Shot Stable Diffusion 1.5) | Output MRI (ControlNet)                | Output MRI (InstructPix2Pix)           | Output MRI (Ground Truth)              |
-|----------------------------------------|---------------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
-| ![00087_ct.png](img/quiz/00087_ct.png) | ![sd.png](img/quiz/sd.png)                  | ![00087_ctcontour_sample_2.png](img/quiz/00087_ctcontour_sample_2.png) | ![ip2p.png](img/quiz/ip2p.png) | ![00087_mr.png](img/quiz/00087_mr.png) |
+### CT → MRI (ControlNet):
+
+![results_1.png](img/results/results_1.png)
+
+### CT → MRI (InstructPix2Pix):
+
+![results_2.png](img/results/results_2.png)
+
+### MRI → CT (InstructPix2Pix):
+
+![mri2ct.png](img/results/mri2ct.png)
 
 *Check out more examples in the `results/` folder or try the live demo above.*
 
@@ -40,7 +49,12 @@ A quick overview of the end-to-end pipeline:
 
 ### Quantitative:
 
-![results.png](img/results.png)
+![results.png](img/results/results.png)
+
+
+### Evaluation:
+
+
 
 
 ## 📦 Installation
