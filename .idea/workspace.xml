@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d7f4c87-48aa-44ef-a79d-90a75fc92bbb" name="Changes" comment="" />
+    <list default="true" id="7d7f4c87-48aa-44ef-a79d-90a75fc92bbb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sauravdosi/Documents/mediffuse/img/quiz",
+    "last_opened_file_path": "/Users/sauravdosi/Documents/mediffuse/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,14 +49,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/img/quiz" />
       <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/img/quiz" />
       <recent name="$PROJECT_DIR$/presentation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/src/evaluate" />
       <recent name="$PROJECT_DIR$/img/results" />
-      <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -76,7 +78,7 @@
       <updated>1747714003449</updated>
       <workItem from="1747714005108" duration="4531000" />
       <workItem from="1747799782080" duration="2076000" />
-      <workItem from="1748023539240" duration="5808000" />
+      <workItem from="1748023539240" duration="5949000" />
     </task>
     <servers />
   </component>
