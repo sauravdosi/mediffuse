@@ -108,7 +108,9 @@ Place the downloaded directories in the project root as data/ and models/.
 
 Activate the Conda environment:
 
-```conda activate mediffuse```
+```
+conda activate mediffuse
+```
 
 ### 2. Inference
 
