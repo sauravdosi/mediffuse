@@ -1,6 +1,6 @@
 # 🖼️ Mediffuse: Diffusion-Driven Translation for MRI Generation from CT Scan
 
-[![Python 3.10](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/) [![Live Demo on Gradio](https://img.shields.io/badge/Gradio-Demo-brightgreen)](GRADIO_DEMO_LINK) [![Finetuned Weights](https://img.shields.io/badge/Weights-Finetuned-blue)](FINETUNED_WEIGHTS_LINK) [![Training Data](https://img.shields.io/badge/Data-Training-lightgrey)](TRAIN_DATA_LINK) [![Dataset on Hugging Face](https://img.shields.io/badge/Dataset-HuggingFace-orange)](HUGGINGFACE_DATASET_LINK)
+[![Python 3.10](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/) [![Live Demo on Gradio](https://img.shields.io/badge/Gradio-Demo-brightgreen)](https://d969b2857f0f723529.gradio.live/) [![Finetuned Weights and Training Data](https://img.shields.io/badge/Data&Weights-HuggingFace-orange)](https://huggingface.co/sauravdosi) 
 
 ---
 
@@ -28,13 +28,20 @@ A quick overview of the end-to-end pipeline:
 
 ## 🖼️ Results
 
-| Input (CT)                        | Output (MRI)                      | Input (MRI)                       | Output (CT)                       |
-| --------------------------------- | --------------------------------- | --------------------------------- | --------------------------------- |
-| ![](path/to/ct_sample1.png)       | ![](path/to/mri_out1.png)         | ![](path/to/mri_sample2.png)      | ![](path/to/ct_out2.png)          |
+### Qualitative:
+
+| Input CT                         | Output MRI (Zero-Shot Stable Diffusion 1.5) | Output MRI (ControlNet)                | Output MRI (InstructPix2Pix)           | Output MRI (Ground Truth)              |
+|----------------------------------------|---------------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
+| ![00087_ct.png](img/quiz/00087_ct.png) | ![sd.png](img/quiz/sd.png)                  | ![00087_ctcontour_sample_2.png](img/quiz/00087_ctcontour_sample_2.png) | ![ip2p.png](img/quiz/ip2p.png) | ![00087_mr.png](img/quiz/00087_mr.png) |
 
 *Check out more examples in the `results/` folder or try the live demo above.*
 
 ---
+
+### Quantitative:
+
+![results.png](img/results.png)
+
 
 ## 📦 Installation
 
