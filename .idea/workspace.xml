@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7f4c87-48aa-44ef-a79d-90a75fc92bbb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/combined_train_loss_all.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/controlnet_psnr_ssim_heatmap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/instructpix2pix_psnr_ssim_heatmap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -72,7 +69,7 @@
       <updated>1747714003449</updated>
       <workItem from="1747714005108" duration="4531000" />
       <workItem from="1747799782080" duration="2076000" />
-      <workItem from="1748023539240" duration="4909000" />
+      <workItem from="1748023539240" duration="5173000" />
     </task>
     <servers />
   </component>

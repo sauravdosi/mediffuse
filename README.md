@@ -124,7 +124,14 @@ python gradio_demo.py
 ```
 OR for standalone inference:
 ```
-python inference.py 
+python inference.py \
+  --input_image "path/to/img.png" \
+  --prompt "translate CT scan image to MRI scan image" \
+  --output "output.png" \
+  --num_inference_steps 100 \
+  --image_guidance_scale 1.5 \
+  --guidance_scale 7.5 \
+  --seed 42
 ```
 OR for inference on a directory along with metrics:
 ```
@@ -133,7 +140,7 @@ python infer_df.py
 
 #### ControlNet
 ```
-cd diffusers/examples/controlnet/
+cd Controlnet/
 python inference.py
 ```
 
@@ -143,32 +150,47 @@ Fine-tuning scripts for both pipelines:
 
 #### InstructPix2Pix Training
 
+```
 cd diffusers/examples/instructpix2pix/
-python train_instructpix2pix.py \
-  --train_data_dir ../../data/train \
-  --pretrained_model_path <base_model> \
-  --output_dir ../../weights/instructpix2pix_finetuned \
-  --epochs 20 --batch_size 8
+accelerate launch --mixed_precision="fp16" train_instruct_pix2pix.py \
+    --pretrained_model_name_or_path="stable-diffusion-v1-5/stable-diffusion-v1-5" \
+    --dataset_name="sauravdosi/ct2mri-img2img-train" \
+    --enable_xformers_memory_efficient_attention \
+    --resolution=512 \
+    --random_flip \
+    --train_batch_size=4 \
+    --gradient_accumulation_steps=4 \
+    --gradient_checkpointing \
+    --max_train_steps=15000 \
+    --checkpointing_steps=1000 \
+    --checkpoints_total_limit=1 \
+    --learning_rate=5e-05 \
+    --max_grad_norm=1 \
+    --lr_warmup_steps=0 \
+    --conditioning_dropout_prob=0.05 \
+    --mixed_precision=fp16 \
+    --seed=42 \
+    --output_dir="./instruct-ct2mri-large" \
+    --report_to tensorboard
+```
 
 #### ControlNet Training
 
-cd diffusers/examples/controlnet/
-python train_controlnet.py \
-  --train_ct_dir ../../data/train/ct \
-  --train_mask_dir ../../data/train/masks \
-  --pretrained_model_path <controlnet_base> \
-  --output_dir ../../weights/controlnet_finetuned \
-  --epochs 15 --batch_size 4
-
+```
+cd Controlnet/
+python tutorial_train.py
+```
 ## 🎯 Conclusion
 
 Mediffuse provides a reliable, fast, and extensible framework for translating between CT and MRI modalities using diffusion-based generative models. Contributions:
 
-- Novel bidirectional diffusion pipeline
+- Novel bidirectional diffusion pipeline.
 
-- ControlNet integration for enhanced control
+- ControlNet integration for enhanced control.
 
-- End-to-end open-source code and live demo
+- End-to-end open-source code and live demo.
+
+Thanks to all the authors: Saurav Dosi, Pratiksha Aigal, Varad Abhyankar and Animesh Maheshwari.
 
 We welcome contributions and feedback!
 
