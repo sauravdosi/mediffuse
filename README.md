@@ -6,7 +6,7 @@
 
 ## 🚀 Workflow
 
-![Mediffuse Workflow](presentation/mediffuse.gif)
+![Mediffuse Workflow](img/mediffuse.gif)
 
 A quick overview of the end-to-end pipeline:
 
