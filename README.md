@@ -1,4 +1,4 @@
-# Mediffuse: CT ↔️ MRI Diffusion-Driven Cross-Modal Translation
+# 🩺🌀 Mediffuse: CT ↔️ MRI Diffusion-Driven Cross-Modal Translation
 
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/) [![Live Demo on Gradio](https://img.shields.io/badge/Gradio-Demo-brightgreen)](https://d969b2857f0f723529.gradio.live/) [![Finetuned Weights and Training Data](https://img.shields.io/badge/Data&Weights-HuggingFace-orange)](https://huggingface.co/sauravdosi) [![Report](https://img.shields.io/badge/Documentation-Report-yellow)](img/CS%206384%20-%20Group%208%20-%20Project%20Report.pdf)
 
