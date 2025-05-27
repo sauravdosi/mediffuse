@@ -52,6 +52,12 @@ A quick overview of the end-to-end pipeline:
 
 ![mri2ct.png](img/results/mri2ct.png)
 
+### CT MRI: Calcination (Potential Tumor) Detection
+
+![mediffise_brain_disease.png](img/results/mediffise_brain_disease.png)
+
+We  ran Mediffuse on a case with subtle tumor calcification that wasn’t visible on the CT input—yet our generated MRI highlighted the lesion in exactly the same region as the ground-truth scan. This suggests the model can infer pathology even when CT shows no obvious sign. To further boost robustness on truly out-of-distribution cases, we’re planning to incorporate more diverse patient scans and scan-specific metadata (e.g., field strength, slice spacing or CLIP embeddings) as additional conditioning.
+
 *Check out more examples in the `results/` folder or try the live demo above.*
 
 ---
