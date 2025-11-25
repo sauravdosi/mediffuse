@@ -102,9 +102,9 @@ Download/Use datasets and weights:
 
 ### Fine-tuned Weights: Box
 
-1. InstructPix2Pix (CT2MRI): https://utdallas.box.com/s/c9yh9hv2i3dty95ajnru5419c7cx2hgm
-2. InstructPix2Pix (MRI2CT): https://utdallas.box.com/s/w8p3tn8npmic9c4oypvfsfgy40qs9dw3
-3. ControlNet (CT2MRI): https://utdallas.box.com/s/q9xbnzmhn6ow0gfr8q207coi38urjd0d
+1. InstructPix2Pix (CT2MRI): https://utdallas.box.com/s/1gyzyfftu0z0r8onyex6ug26mxde5wlw
+2. InstructPix2Pix (MRI2CT): https://utdallas.box.com/s/21k5bnqdbtj0oy4o2d56k80mc0bbo708
+3. ControlNet (CT2MRI): https://utdallas.box.com/s/g1youcm3ndtmlhvvvir3cjcuxcbgqxxu
 
 Place the downloaded directories in the project root as data/ and models/.
 
